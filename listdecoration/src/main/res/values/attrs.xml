@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="LineDecorationView">
+        <attr name="deco_line_color" format="color" />
+        <attr name="deco_text_color" format="color" />
+        <attr name="deco_line_width" format="dimension" />
+        <attr name="deco_isEnd" format="boolean" />
+        <attr name="deco_isStart" format="boolean" />
+        <attr name="deco_text_size" format="dimension" />
+        <attr name="deco_orientation" format="enum">
+            <enum name="vertical" value="0" />
+            <enum name="horizontal" value="1" />
+        </attr>
+        <attr name="deco_gravity" format="enum">
+            <enum name="center" value="0" />
+            <enum name="start" value="1" />
+            <enum name="end" value="2" />
+        </attr>
+        <attr name="deco_margin" format="dimension"/>
+    </declare-styleable>
+</resources>

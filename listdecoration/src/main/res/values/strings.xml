@@ -1,4 +1,3 @@
 <resources>
     <string name="app_name">ListDecoration</string>
-    <string name="item">Item %d</string>
 </resources>

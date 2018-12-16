@@ -1,4 +1,4 @@
-package at.osim.listdecoration;
+package at.osim.sample.listdecoration;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

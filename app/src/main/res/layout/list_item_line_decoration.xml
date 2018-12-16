@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:background="?attr/selectableItemBackground">
+
+
+    <at.osim.listdecoration.LineDecorationView
+        android:id="@+id/ld_decoration"
+        android:layout_width="48dp"
+        android:layout_height="match_parent"
+        app:deco_gravity="start"
+        app:deco_line_color="@android:color/holo_red_dark"
+        app:deco_line_width="4dp"
+        app:deco_margin="16dp"
+        app:deco_orientation="vertical"
+        app:deco_text_size="14sp" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_margin="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="List element"/>
+
+</LinearLayout>
