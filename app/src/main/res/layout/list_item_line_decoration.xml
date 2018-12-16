@@ -8,16 +8,16 @@
     android:background="?attr/selectableItemBackground">
 
 
-    <at.osim.listdecoration.LineDecorationView
+    <at.osim.listdecoration.OutlinedLineDecorationView
         android:id="@+id/ld_decoration"
         android:layout_width="48dp"
         android:layout_height="match_parent"
         app:deco_gravity="start"
         app:deco_line_color="@android:color/holo_red_dark"
-        app:deco_line_width="4dp"
+        app:deco_line_width="6dp"
         app:deco_offset="16dp"
-        app:deco_padding="4dp"
         app:deco_orientation="vertical"
+        app:deco_padding="4dp"
         app:deco_text_size="14sp" />
 
     <TextView

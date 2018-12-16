@@ -11,37 +11,37 @@ import android.view.View;
 
 public class LineDecorationView extends View {
 
-    private enum Orientation {
+    protected enum Orientation {
         HORIZONTAL,
         VERTICAL
     }
 
-    private enum Gravity {
+    protected enum Gravity {
         START,
         CENTER,
         END
     }
 
     private Paint textPaint;
-    private Paint linePaint;
+    protected Paint linePaint;
 
-    private boolean isStart = false;
-    private boolean isEnd = false;
+    protected boolean isStart = false;
+    protected boolean isEnd = false;
 
-    private int width;
-    private int height;
+    protected int width;
+    protected int height;
 
-    private boolean drawCircle = true;
+    protected boolean drawCircle = true;
 
     private String text = "";
 
-    private Point center;
-    private int radius;
+    protected Point center;
+    protected int radius;
 
-    private Orientation orientation = Orientation.VERTICAL;
-    private Gravity gravity = Gravity.CENTER;
-    private int decoOffset;
-    private int decoPadding;
+    protected Orientation orientation = Orientation.VERTICAL;
+    protected Gravity gravity = Gravity.CENTER;
+    protected int decoOffset;
+    protected int decoPadding;
 
     public LineDecorationView(Context context) {
         super(context);
@@ -58,7 +58,7 @@ public class LineDecorationView extends View {
         init(context, attrs);
     }
 
-    private void init(Context context, AttributeSet attrs) {
+    protected void init(Context context, AttributeSet attrs) {
         textPaint = new Paint();
         linePaint = new Paint();
 
@@ -99,7 +99,7 @@ public class LineDecorationView extends View {
         drawCircle(canvas);
     }
 
-    private void drawLine(Canvas canvas) {
+    protected void drawLine(Canvas canvas) {
         if (isStart) {
             if (orientation == Orientation.VERTICAL) {
                 canvas.drawLine(center.x, center.y, center.x, height, linePaint);
@@ -121,7 +121,7 @@ public class LineDecorationView extends View {
         }
     }
 
-    private void drawCircle(Canvas canvas) {
+    protected void drawCircle(Canvas canvas) {
         if (drawCircle) {
             canvas.drawCircle(center.x, center.y, radius, linePaint);
             canvas.drawText(text, center.x, center.y - ((textPaint.descent() + textPaint.ascent()) / 2), textPaint);
