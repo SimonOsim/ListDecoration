@@ -40,7 +40,8 @@ public class LineDecorationView extends View {
 
     private Orientation orientation = Orientation.VERTICAL;
     private Gravity gravity = Gravity.CENTER;
-    private int decoMargin;
+    private int decoOffset;
+    private int decoPadding;
 
     public LineDecorationView(Context context) {
         super(context);
@@ -81,7 +82,8 @@ public class LineDecorationView extends View {
                     gravity = Gravity.CENTER;
 
             }
-            decoMargin = attributes.getDimensionPixelSize(R.styleable.LineDecorationView_deco_margin, 0);
+            decoOffset = attributes.getDimensionPixelSize(R.styleable.LineDecorationView_deco_offset, 0);
+            decoPadding = attributes.getDimensionPixelSize(R.styleable.LineDecorationView_deco_padding, 0);
 
             attributes.recycle();
         }
@@ -130,7 +132,7 @@ public class LineDecorationView extends View {
     protected void onSizeChanged(int w, int h, int oldw, int oldh) {
         this.width = getMeasuredWidth();
         this.height = getMeasuredHeight();
-        this.radius = Math.min(width, height) / 3;
+        this.radius = Math.min(width, height) / 2 - (2 * decoPadding);
         calculateCenter();
         super.onSizeChanged(w, h, oldw, oldh);
     }
@@ -182,15 +184,15 @@ public class LineDecorationView extends View {
             center = new Point(width / 2, height / 2);
         } else if (gravity == Gravity.START) {
             if (orientation == Orientation.VERTICAL) {
-                center = new Point(width / 2, decoMargin + radius);
+                center = new Point(width / 2, decoOffset + radius);
             } else {
-                center = new Point(decoMargin + radius, height / 2);
+                center = new Point(decoOffset + radius, height / 2);
             }
         } else {
             if (orientation == Orientation.VERTICAL) {
-                center = new Point(width / 2, height - decoMargin - radius);
+                center = new Point(width / 2, height - decoOffset - radius);
             } else {
-                center = new Point(width - decoMargin - radius, height / 2);
+                center = new Point(width - decoOffset - radius, height / 2);
             }
         }
     }

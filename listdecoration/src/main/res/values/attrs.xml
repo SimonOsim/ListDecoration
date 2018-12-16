@@ -16,6 +16,7 @@
             <enum name="start" value="1" />
             <enum name="end" value="2" />
         </attr>
-        <attr name="deco_margin" format="dimension"/>
+        <attr name="deco_offset" format="dimension"/>
+        <attr name="deco_padding" format="dimension"/>
     </declare-styleable>
 </resources>

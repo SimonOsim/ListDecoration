@@ -15,7 +15,8 @@
         app:deco_gravity="start"
         app:deco_line_color="@android:color/holo_red_dark"
         app:deco_line_width="4dp"
-        app:deco_margin="16dp"
+        app:deco_offset="16dp"
+        app:deco_padding="4dp"
         app:deco_orientation="vertical"
         app:deco_text_size="14sp" />
 
